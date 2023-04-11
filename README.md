@@ -32,20 +32,27 @@ Based on various meteorological surveys and people's styles, the service provide
 There is a requirement to model the demand for shared bikes with the available independent variables. It will be used by the management to understand how exactly the demands vary with different features. They can accordingly manipulate the business strategy to meet the demand levels and meet the customer's expectations. Further, the model will be a good way for management to understand the demand dynamics of a new market. 
 
 ## Conclusions
-- By looking at the data set we understand that cnt variable that indicates the total number of bike rentals, including both casual and registered is our target variable, 
- 
- Upon doing the bivariate analysis over the categorical variables with respect to target variable loan_status it can be concluded that :- 
-   - Borrower who choose term of 60 months tend to have 30% more chances of default then people with loan term of 30 months
-   - Borrower who take loan grade is of F and G tends to have higher defaulting chances of 30% then compared to other grades 
-   - Borrower who take loan Sub grade F5 have 50% chances of defaulting
-   - Borrower who apply for the loan with the purpose of 'small business' have 30% more chances of defaulting then other purposes.
-   
-  Upon doing a bivariate analysis on numerical variables with respect to target variable loan_status it can be concluded that :-
-   - Borrower whose loam amount is more, have higher chances of being defaulted
-   - Borrower who has taken loan with higher interest rate have higer chances of being defaulted
-   - Borrower who have more number of enquires in the last 6 months, have more chances of being defaulted
-   - If the amount of credit the borrower is using relative to all available revolving credit is high then there are higher chances of being defaulted
+ From our analysis of the categorical variables from the dataset inference from the categorical variables is as follows:-
+• The demand of bike is less in the month of spring when compared with other seasons
+• The demand bike increased in the year 2019 when compared with year 2018.
+• Month Jun to Sep is the period when bike demand is high. The Month Jan is the lowest demand month.
+• Bike demand is less in holidays in comparison to not being holiday.
+• The demand of bike is almost similar throughout the weekdays.
+• There is no significant change in bike demand with working day and non working day.
+• The bike demand is high when weather is clear and Few clouds however demand is less in case 
+of Lights now and light rainfall. We do not have any data for Heavy Rain + Ice Pallets + 
+Thunderstorm + Mist, Snow + Fog , so we cannot derive any conclusion. May be the company is 
+not operating on those days or there is no demand of bike.
+• Looking at the pair-plot among the numerical variables temp and atemp has the highest correlation with cnt the target variable 0.64,0.65 respectively
+and A Negative correlation observed with cnt vs hum and cnt vs windspeed -0.06 and -0.25
 
+Based on the final model, following are the top 3 features contributing significantly towards explaining 
+the demand of the shared bikes :- temp, weathersit_Light_snow_rain_thunderstrom and yr_2019
+temp with coefficient of 0.59 i.e., 59%
+weathersit_Light_snow_rain_thunderstrom:- Light Snow, Light Rain + Thunderstorm + Scattered clouds, 
+Light Rain + Scattered clouds with coefficient of -0.24 i.e., -24%
+yr_2019 with coefficient of 0.22 i.e., 22%
+so the bike sharing company mus concentrate on these 3 features temp, weathersit_Light_snow_rain_thunderstrom and yr_2019.
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
@@ -64,7 +71,7 @@ Give credit here.
 
 
 ## Contact
-Created by [@Utkarsha-Shripanavar,@khyatidesai09] - feel free to contact me!
+Created by [@Utkarsha-Shripanavar] - feel free to contact me!
 
 
 <!-- Optional -->
